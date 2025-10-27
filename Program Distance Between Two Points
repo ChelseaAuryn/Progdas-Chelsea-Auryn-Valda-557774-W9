@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main () {
+    double x1, y1; //titik pusat lingkaran
+    double x2, y2; //titik pada lingkaran
+    const double PI = 3.1416;
+
+    cout << "==== Distance Between Two Point ====" << endl;
+    cout << "Masukkan koordinat pusat lingkaran (x1 y1) :";
+    cin >> x1 >> y1;
+
+    cout << "Masukkan koordinat titik pada lingkaran (x2 y2) :";
+    cin >> x2 >> y2;
+
+    double radius = sqrt (pow(x2 - x1, 2)+ pow (y2 - y1,2));
+    double diameter = 2 * radius;
+    double circumference = 2 * PI * radius;
+    double area = PI * pow (radius, 2);
+
+    cout << "==   Hasil Perhitungan  ==" << endl;
+    cout << "Radius (Jari-jari): " << radius << endl;
+    cout << "Diameter: " << diameter << endl;
+    cout << "Circumference (Keliling): " << circumference << endl;
+    cout << "Area (Luas): " << area << endl;
+
+    return 0;
+
+}
