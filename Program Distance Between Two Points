@@ -2,6 +2,21 @@
 #include <cmath>
 using namespace std;
 
+double distance(double x1, double y1, double x2, double y2) {
+    return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+}
+double hitungRadius(double x1, double y1, double x2, double y2) {
+    return distance(x1, y1, x2, y2);
+}
+double hitungCircumference(double radius) {
+    const double PI = 3.1416;
+    return 2 * PI * radius;
+}
+double hitungArea(double radius) {
+    const double PI = 3.1416;
+    return PI * pow(radius, 2);
+}
+
 int main () {
     double x1, y1; //titik pusat lingkaran
     double x2, y2; //titik pada lingkaran
@@ -15,7 +30,7 @@ int main () {
     cin >> x2 >> y2;
 
     double radius = sqrt (pow(x2 - x1, 2)+ pow (y2 - y1,2));
-    double diameter = 2 * radius;
+    double diameter = 2* radius;
     double circumference = 2 * PI * radius;
     double area = PI * pow (radius, 2);
 
@@ -26,5 +41,4 @@ int main () {
     cout << "Area (Luas): " << area << endl;
 
     return 0;
-
 }
